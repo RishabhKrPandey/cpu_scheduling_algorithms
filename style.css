@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    text-align: center;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.selectalgo {
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+select {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #28a745;
+    border-radius: 5px;
+    outline: none;
+}
+
+.buttoncontainer {
+    margin: 20px 0;
+}
+
+button {
+    padding: 12px 15px;
+    margin: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+button:nth-child(1) {
+    background-color: #007bff;
+    color: white;
+}
+
+button:nth-child(2) {
+    background-color: #dc3545;
+    color: white;
+}
+
+button:nth-child(3) {
+    background-color: #28a745;
+    color: white;
+}
+
+.tablecontainer {
+    margin-top: 30px;
+}
+
+table {
+    width: 80%;
+    margin: auto;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background: white;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 16px;
+}
+
+th {
+    background: #28a745;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background: #f2f2f2;
+}
+
+.ganttchartcontainer {
+    margin-top: 30px;
+}
+
+canvas {
+    margin-top: 20px;
+    border: 2px solid #333;
+    background: white;
+}
+.table-input {
+    width: 60px; /* Adjust width as needed */
+    padding: 5px;
+    font-size: 14px;
+    text-align: center;
+}

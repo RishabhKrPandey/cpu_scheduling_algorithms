@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPU SCHEDULING ALGORITHMS</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- we will create tables to take input data from user -->
+     <!-- calculate and show ct, tat, wt and avg wt -->
+      <!-- plot and show gantt chart -->
+       <div class="selectalgo" id="selectalgo">
+        <label class="algo">Select Algorithm : </label>
+        <select name="algorithm" id="algorithm">
+            <option value="FCFS">First Come First Serve (FCFS)</option>
+            <option value="SJF">Shortest Job First (SJF - NON PREEMPTIVE)</option>
+            <option value="PSJF">Shortest Job First (SJF - PREEMPTIVE)</option>
+            <option value="Priority">Priority Scheduling (NON PREEMPTIVE)</option>
+            <option value="PPriority">Priority Scheduling (PREEMPTIVE)</option>
+            <option value="RoundRobin">Round Robin (RR)</option>
+        </select>
+       </div>
+       <div class="buttoncontainer" id="buttoncontainer">
+        <button onclick="addProcess()">Add Process</button>
+        <button onclick="removeProcess()">Remove Last Process</button>
+        <button onclick="calculateScheduling()">Compute Scheduling</button>
+       </div>
+
+       <div class="tableconatiner" id="tablecontainer">
+
+        
+        <h3>Computed Results</h3>
+        <table id="processTable">
+            <tr>
+                <th>PID</th>
+                <th>AT</th>
+                <th>BT</th>
+                <th>Priority</th>
+                <th>CT</th>
+                <th>TAT</th>
+                <th>WT</th>
+            </tr>
+        </table>
+       </div>
+       <div class="ganttchartconatiner" id="ganttchart">
+        <h3 style="margin-top: 10px">Gantt Chart</h3>
+        
+<canvas id="ganttChartCanvas"></canvas>
+
+
+       </div>
+       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+       <script src="script.js"></script>
+</body>
+</html>
