@@ -1,6 +1,8 @@
 # 🖥️ CPU Scheduling Visualizer
 
+
 A **web-based CPU Scheduling Visualizer** built using **HTML, CSS, JavaScript, and Chart.js** to help understand various CPU scheduling algorithms.
+checkout at :- https://stirring-bublanina-58a00e.netlify.app/
 
 ## 🎯 Features
 - ✅ Supports multiple CPU scheduling algorithms:
