@@ -60,6 +60,8 @@ function calculateScheduling(){
         let quantum = parseInt(prompt("Enter Time Quantum:", 2));
         roundRobinScheduling(process, quantum);
     }
+    let { avgWT, avgTAT } = calculateAverages(process);
+    displayAverages(avgWT, avgTAT);
 
 }
 
@@ -360,6 +362,28 @@ const bestColors = [
 function getRandomBestColor() {
     return bestColors[Math.floor(Math.random() * bestColors.length)];
 }
+function calculateAverages(processes) {
+    let totalWT = 0, totalTAT = 0;
+
+    processes.forEach(p => {
+        totalWT += p.wt;
+        totalTAT += p.tat;
+    });
+
+    let avgWT = (totalWT / processes.length).toFixed(2);
+    let avgTAT = (totalTAT / processes.length).toFixed(2);
+
+    return { avgWT, avgTAT };
+}
+function displayAverages(avgWT, avgTAT) {
+    document.getElementById("avgResults").innerHTML = `
+        
+        <p><strong>Average Waiting Time (AWT):</strong> ${avgWT} units</p>
+        <p><strong>Average Turnaround Time (ATAT):</strong> ${avgTAT} units</p>
+    `;
+}
+
+
 
 
 
